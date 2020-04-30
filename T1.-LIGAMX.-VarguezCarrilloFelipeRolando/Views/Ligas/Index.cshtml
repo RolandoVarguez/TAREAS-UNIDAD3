@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LigaMX.Models.Liga>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Equipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DirectorTecnico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estadio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fundacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Campeonatos)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Equipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DirectorTecnico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estadio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fundacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Campeonatos)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

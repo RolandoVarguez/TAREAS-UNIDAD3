@@ -1,0 +1,72 @@
+﻿@model LigaMX.Models.Liga
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Liga</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DirectorTecnico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirectorTecnico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estadio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estadio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fundacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fundacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Campeonatos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Campeonatos)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

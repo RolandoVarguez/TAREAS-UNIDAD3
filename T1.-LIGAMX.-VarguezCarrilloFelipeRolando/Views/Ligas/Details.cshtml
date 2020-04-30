@@ -1,0 +1,66 @@
+﻿@model LigaMX.Models.Liga
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Liga</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DirectorTecnico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirectorTecnico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estadio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estadio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fundacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fundacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Campeonatos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Campeonatos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
